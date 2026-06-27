@@ -1,0 +1,27 @@
+# Air config for hot reloading during development
+# Install: go install github.com/air-verse/air@latest
+# Run: air
+
+root = "."
+tmp_dir = "tmp"
+
+[build]
+  cmd = "go build -o ./tmp/main ."
+  bin = "./tmp/main"
+  delay = 1000
+  exclude_dir = ["assets", "tmp", "vendor"]
+  include_ext = ["go", "env"]
+  kill_delay = "0s"
+  log = "air.log"
+
+[log]
+  time = true
+
+[color]
+  main = "magenta"
+  watcher = "cyan"
+  build = "yellow"
+  runner = "green"
+
+[misc]
+  clean_on_exit = true
