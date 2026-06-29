@@ -1,6 +1,6 @@
-cat > .gitignore << 'EOF'
 .env
 tmp/
 air.log
 *.exe
-EOF
+vendor/
+.DS_Store
